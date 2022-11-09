@@ -2,7 +2,7 @@
 
 Deep Learning Framework for the Deep Medical Anomaly Segmentation Seminar
 
-[![Open Demo In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/compai-lab/mad-dl/blob/main/demo.ipynb)
+[![Open Demo In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/compai-lab/d-mas-framework/blob/main/demo.ipynb)
 
 ![Framework overview](./iml_dl.png)
 
