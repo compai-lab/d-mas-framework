@@ -67,11 +67,11 @@ trainer:
           class_name: CXRDataset
         data_dir:
           train:
-            - './data/CXR/splits/cxr_normal_train.csv'
+            - './data/splits/cxr_normal_train.csv'
           val:
-            - './data/CXR/splits/cxr_normal_val.csv'
+            - './data/splits/cxr_normal_val.csv'
           test:
-            - './data/CXR/splits/cxr_normal_test.csv'
+            - './data/splits/cxr_normal_test.csv'
         target_size: *target_size
         #        batch_size: 128 # orig
         batch_size: 64
@@ -95,30 +95,9 @@ downstream_tasks:
         Normal_CXR:
           data_dir:
             test:
-            - './data/CXR/splits/cxr_normal_test.csv'
+            - './data/splits/cxr_normal_test.csv'
         Pneumonia:
           data_dir:
             test:
-  generalization:
-    module_name: projects.Autoencoders.DownstreamEvaluator_exp
-    class_name: PDownstreamEvaluator
-    checkpoint_path: *checkpoint_path
-    data_loader:
-      module_name: core.DataLoader
-      class_name: DefaultDataLoader
-      params:
-        args:
-          dataset_module:
-            module_name: data.loaders.cxr_loader
-            class_name: CXRDataset
-          target_size: *target_size
-          batch_size: *dbatch_size
-      datasets:
-        Normal_Padchest:
-          data_dir:
-            test:
-              - './data/padchest/splits/normal_test.csv'
-        Covid:
-          data_dir:
-            test:
-              - './data/CXR/splits/cxr_covid_padchest_test.csv'
+            - './data/splits/cxr_opacity_test.csv'
+
