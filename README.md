@@ -14,14 +14,14 @@ Deep Learning Framework for the Deep Medical Anomaly Segmentation Seminar
  * Login to wandb with `wandb login`
  * Paste the API key when prompted. You will find your API key here: https://wandb.ai/authorize. 
  
-1). Clone iml-dl to desired location 
- * `git clone https://github.com/iml-compai-munich/iml-dl.git *TARGET_DIR*`
+1). Clone d-mas framework to desired location 
+ * `git clone https://github.com/compai-lab/d-mas-framework.git *TARGET_DIR*`
 
 2). Create a virtual environment with the needed packages (use conda_environment-osx.yaml for macOS)
 ```
-cd ${TARGET_DIR}/iml-dl
+cd ${TARGET_DIR}/d-mas-framework
 conda env create -f conda_environment.yaml
-source activate iml_py308 *or* conda activate iml_py308
+source activate mas_py308 *or* conda activate mas_py308
 ```
 
 3). Install pytorch
